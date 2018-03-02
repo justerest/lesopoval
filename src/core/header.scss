@@ -1,12 +1,14 @@
 .header {
-  position: sticky;
+  position: fixed;
   z-index: 999;
   top: 0;
+  left: 0;
+  width: 100%;
   padding-top: 18px;
+  padding-bottom: 7px;
   transition: all $transition-medium;
   color: $color-orange;
   background-color: $color-black;
-  padding-bottom: 7px;
 
   &__flex-container {
     position: relative;

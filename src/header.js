@@ -1,11 +1,13 @@
-onScroll(window);
+onScroll();
 window.addEventListener('scroll', onScroll);
 
 document.querySelector('.menu-icon').addEventListener('click', () => toggleNav());
 
-function onScroll(event) {
+function onScroll() {
   const headerEl = document.querySelector('.header');
-  if (event.pageY > 150) headerEl.classList.add('header_position_not-top');
+  if (scrollY > 150) {
+    headerEl.classList.add('header_position_not-top');
+  }
   else {
     headerEl.classList.remove('header_position_not-top');
     toggleNav(true);
