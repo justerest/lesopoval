@@ -21,16 +21,16 @@
         font: $roboto-slab-bold-18;
     }
     &__menu {
+        padding: 0;
         list-style-type: none;
         color: $color-orange;
         font: $roboto-slab-bold-24;
         line-height: 36px;
-        padding: 0;
     }
     &__button {
         a {
-            color: $color-orange;
             text-decoration: none;
+            color: $color-orange;
         }
     }
 }
