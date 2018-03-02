@@ -1,6 +1,5 @@
 onScroll();
 window.addEventListener('scroll', onScroll);
-
 document.querySelector('.menu-icon').addEventListener('click', () => toggleNav());
 
 function onScroll() {
