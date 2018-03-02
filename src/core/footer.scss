@@ -14,17 +14,18 @@
     &__txt {
         display: block;
         color: $color-orange;
-        font: $roboto-regular-14;
+        font: $roboto-slab-regular-14;
         line-height: 25px;
     }
     &__txt_bold {
-        font: $roboto-bold-18;
+        font: $roboto-slab-bold-18;
     }
     &__menu {
         list-style-type: none;
         color: $color-orange;
-        font: $roboto-bold-24;
+        font: $roboto-slab-bold-24;
         line-height: 36px;
+        padding: 0;
     }
     &__button {
         a {
