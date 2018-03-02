@@ -1,98 +1,110 @@
 .form {
-    .container {
-        padding-top: 42px;
-    }
-    input::placeholder,
-    textarea::placeholder {
-        color: $color-brown;
-        opacity: 1;
-    }
-    select {
-        border: none;
-        outline: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        border-radius: 0;
-        display: block;
-        width: 100%;
-        padding-left: 23px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        color: $color-brown;
-    }
-    input {
-        border: none;
-        outline: none;
-        background: transparent;
-    }
-    textarea {
-        border: none;
-        background: transparent;
-        border: none;
-        overflow: auto;
-        outline: none;
-    }
-    &__header {
-        font: $roboto-slab-bold-48;
-        text-align: center;
-        margin-bottom: 26px;
-    }
-    &__header2 {
-        font: $roboto-bold-30;
-        text-align: center;
-        margin-bottom: 36px;
-    }
-    &__input {
-        height: 59px;
-        width: 100%;
-        padding-left: 23px;
-        padding-right: 23px;
-    }
-    &__label {
-        display: block;
-        font: $roboto-bold-30;
-    }
-    &__custom-border {
-        position: relative;
-        display: block;
-        width: 90%;
-        height: auto;
-        border: 1px solid $color-brown;
-        font: $roboto-regular-30;
-    }
-    &__triangle {
-        position: absolute;
-        right: 19px;
-        top: 20px;
-        width: 10px;
-        border: 10px solid transparent;
-        border-top: 20px solid $color-brown;
-        pointer-events: none;
-    }
-    &__file-input {
-        height: 42px;
-        width: 70%;
-        font-size: 20px;
-        margin-bottom: 32px;
-    }
-    &__textarea {
-        height: 135px;
-        width: 100%;
-        padding-left: 23px;
-        padding-right: 23px;
-        padding-top: 10px;
-    }
-    &__button {
-        width: 464px;
-        height: 62px;
-        background-color: $color-brightBrown;
-        border-radius: 10px;
-        border-width: 0px;
-        margin-top: 46px;
-        margin-bottom: 34px;
-        font: $roboto-bold-30;
-        color: $color-white;
-        cursor: pointer;
-    }
+  .container {
+    padding-top: 42px;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    opacity: 1;
+    color: $color-brown;
+  }
+
+  select {
+    display: block;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 23px;
+    color: $color-brown;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  input {
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+
+  textarea {
+    overflow: auto;
+    border: none;
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+
+  &__header {
+    margin-bottom: 26px;
+    text-align: center;
+    font: $roboto-slab-bold-48;
+  }
+
+  &__header2 {
+    margin-bottom: 36px;
+    text-align: center;
+    font: $roboto-bold-30;
+  }
+
+  &__input {
+    width: 100%;
+    height: 59px;
+    padding-right: 23px;
+    padding-left: 23px;
+  }
+
+  &__label {
+    display: block;
+    font: $roboto-bold-30;
+  }
+
+  &__custom-border {
+    position: relative;
+    display: block;
+    width: 90%;
+    height: auto;
+    border: 1px solid $color-brown;
+    font: $roboto-regular-30;
+  }
+
+  &__triangle {
+    position: absolute;
+    top: 20px;
+    right: 19px;
+    width: 10px;
+    pointer-events: none;
+    border: 10px solid transparent;
+    border-top: 20px solid $color-brown;
+  }
+
+  &__file-input {
+    width: 70%;
+    height: 42px;
+    margin-bottom: 32px;
+    font-size: 20px;
+  }
+
+  &__textarea {
+    width: 100%;
+    height: 135px;
+    padding-top: 10px;
+    padding-right: 23px;
+    padding-left: 23px;
+  }
+
+  &__button {
+    width: 464px;
+    height: 62px;
+    margin-top: 46px;
+    margin-bottom: 34px;
+    cursor: pointer;
+    color: $color-white;
+    border-width: 0;
+    border-radius: 10px;
+    background-color: $color-brightBrown;
+    font: $roboto-bold-30;
+  }
 }

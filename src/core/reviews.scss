@@ -1,0 +1,60 @@
+.reviews {
+  background-color: $color-brown;
+
+  &__header {
+    padding-top: 15px;
+    color: $color-white;
+    font: $roboto-slab-bold-48;
+  }
+
+  &__frame {
+    position: relative;
+    overflow: hidden;
+    width: 94%;
+    white-space: nowrap;
+    border-radius: 10px;
+  }
+
+  &__slider {
+    padding-left: 6%;
+  }
+
+  &__slides {
+    display: inline-block;
+    font: $roboto-regular-24;
+    color: $color-black;
+    margin-bottom: 0;
+  }
+
+  &__slide {
+    position: relative;
+    display: inline-block;
+    width: 1034px;
+    height: 218px;
+    background-color: $color-white;
+  }
+
+  &__prev,
+  &__next {
+    position: absolute;
+    top: 50%;
+    display: block;
+    margin-top: -25px;
+    cursor: pointer;
+  }
+
+  &__next {
+    right: 0;
+  }
+
+  &__prev {
+    left: 0;
+  }
+
+  &__txt {
+    font: $roboto-regular-24;
+    width: auto;
+    padding-top: 37px;
+    padding-left: 67px;
+  }
+}

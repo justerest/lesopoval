@@ -1,36 +1,40 @@
-/* Style for "Layer 19" */
-
 .footer {
-    height: 326px;
-    background-color: $color-black;
-    .container {
-        padding-top: 30px;
+  height: 326px;
+  background-color: $color-black;
+
+  .container {
+    padding-top: 30px;
+  }
+
+  &__logo {
+    width: 139px;
+    height: 139px;
+    color: $color-orange;
+  }
+
+  &__txt {
+    display: block;
+    color: $color-orange;
+    font: $roboto-slab-regular-14;
+    line-height: 25px;
+  }
+
+  &__txt_bold {
+    font: $roboto-slab-bold-18;
+  }
+
+  &__menu {
+    padding: 0;
+    list-style-type: none;
+    color: $color-orange;
+    font: $roboto-slab-bold-24;
+    line-height: 36px;
+  }
+
+  &__button {
+    a {
+      text-decoration: none;
+      color: $color-orange;
     }
-    &__logo {
-        width: 139px;
-        height: 139px;
-        color: $color-orange;
-    }
-    &__txt {
-        display: block;
-        color: $color-orange;
-        font: $roboto-slab-regular-14;
-        line-height: 25px;
-    }
-    &__txt_bold {
-        font: $roboto-slab-bold-18;
-    }
-    &__menu {
-        list-style-type: none;
-        color: $color-orange;
-        font: $roboto-slab-bold-24;
-        line-height: 36px;
-        padding: 0;
-    }
-    &__button {
-        a {
-            color: $color-orange;
-            text-decoration: none;
-        }
-    }
+  }
 }
