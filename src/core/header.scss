@@ -6,6 +6,7 @@
   transition: all $transition-medium;
   color: $color-orange;
   background-color: $color-black;
+  padding-bottom: 7px;
 
   &__flex-container {
     position: relative;
@@ -28,7 +29,7 @@
 
   &__menu {
     position: absolute !important;
-    left: 0;
+    left: 10px;
     visibility: hidden;
     margin: auto 0;
     opacity: 0;
@@ -41,10 +42,6 @@
   &_position_not-top &__menu {
     visibility: visible;
     opacity: 1;
-  }
-
-  &_position_not-top &__phone {
-    padding-bottom: 7px;
   }
 
   &_position_not-top &__logo {
@@ -64,13 +61,13 @@
 
   &__item {
     position: relative;
-    padding: 16px 0;
+    padding: 16px 0 9px;
     cursor: pointer;
     transition: all $transition-fast;
 
     &:after {
       position: absolute;
-      bottom: 0;
+      bottom: -7px;
       left: -8px;
       width: calc(100% + 16px);
       height: 0;
@@ -88,7 +85,7 @@
     }
   }
 
-  .header_position_not-top & {
+  .header_position_not-top &:not(.nav_opened) {
     visibility: hidden;
     margin-top: -65px;
     opacity: 0;
