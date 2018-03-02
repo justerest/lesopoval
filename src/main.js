@@ -1,6 +1,6 @@
 import './app.scss';
 
-import lory from 'lory.js';
+import { lory } from 'lory.js';
 
 import { initIcons } from './icons';
 
