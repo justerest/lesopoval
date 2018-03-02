@@ -1,0 +1,39 @@
+.services {
+  background-color: $color-white;
+
+  &__flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 140px;
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      .services__image {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__image {
+    margin-top: auto;
+    color: $color-brown-bright;
+  }
+
+  &__label {
+    margin-top: 11px;
+    width: 100%;
+    display: block;
+    height: 42px;
+    font: $roboto-bold-21;
+    text-align: center;
+  }
+}
