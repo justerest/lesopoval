@@ -5,10 +5,10 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
 
-  entry: ['./src/app.js'],
+  entry: ['./src/main.js'],
 
   output: {
-    filename: 'js/[name].[hash].js',
+    filename: '[name].[hash].js',
     chunkFilename: '[name].[hash].js',
     path: path.resolve(__dirname, 'dist'),
   },
@@ -61,12 +61,16 @@ module.exports = {
       },
     },
     {
-      test: /\.(png|jpg|gif|svg)$/,
+      test: /\.(png|jpg|gif)$/,
       loader: 'file-loader',
       options: {
         name: '[name].[ext]?[hash]',
         outputPath: 'img/',
       },
+    },
+    {
+      test: /\.svg$/,
+      loader: 'svg-inline-loader',
     }],
   },
 
@@ -81,6 +85,6 @@ module.exports = {
         removeAttributeQuotes: true,
       },
     }),
-    new ExtractTextPlugin('css/styles.[hash].css'),
+    new ExtractTextPlugin('styles.[hash].css'),
   ],
 };
