@@ -1,25 +1,26 @@
-<form class="form" method="post">
+<section class="form">
   <div class="container">
     <div class="row no-gutters justify-content-center">
-      <span class="form__header">РАССЧИТАТЬ СТОИМОСТЬ ЗАКАЗА</span>
-      <span class="form__header2">Заполните форму и мы свяжемся с вами в ближайшее время</span>
+      <span class="form__title">РАССЧИТАТЬ СТОИМОСТЬ ЗАКАЗА</span>
+      <span class="form__subtitle">Заполните форму и мы свяжемся с вами в ближайшее время</span>
     </div>
-    <div class="row no-gutters">
-      <div class="col-6">
-        <label class="form__label">Имя: </label>
-        <label class="form__custom-border">
+    <form method="post">
+      <div class="row no-gutters">
+        <div class="col-6">
+          <label class="form__label">Имя: </label>
+          <label class="form__custom-border">
                     <input class="form__input" type="text" placeholder="Введите имя">
                 </label>
-        <label class="form__label">Телефон: </label>
-        <label class="form__custom-border">
+          <label class="form__label">Телефон: </label>
+          <label class="form__custom-border">
                     <input class="form__input" type="tel" placeholder="+7 (_ _ _) _ _ _ -_ _- _ _">
                 </label>
-        <label class="form__label">E-mail: </label>
-        <label class="form__custom-border">
+          <label class="form__label">E-mail: </label>
+          <label class="form__custom-border">
                     <input class="form__input" type="email" placeholder="Введите электронный адрес">
                 </label>
-        <label class="form__label">Виды работ:</label>
-        <label class="form__custom-border">
+          <label class="form__label">Виды работ:</label>
+          <label class="form__custom-border">
                     <div class="form__triangle"></div>
                     <select class="form__select">
                         <option>Валка деревьев1</option>
@@ -27,20 +28,21 @@
                         <option>Валка деревьев3</option>
                     </select>
                 </label>
-      </div>
-      <div class="col-6">
-        <label class="form__label">Если есть фото: </label>
-        <input class="form__file-input" type="file" name="photos" accept=".jpg, .png, .bmp">
-        <input class="form__file-input" type="file" name="photos" accept=".jpg, .png, .bmp">
-        <input class="form__file-input" type="file" name="photos" accept=".jpg, .png, .bmp">
-        <label class="form__label">Описание проблемы: </label>
-        <label class="form__custom-border">
+        </div>
+        <div class="col-6">
+          <label class="form__label">Если есть фото: </label>
+          <input class="form__file-input" type="file" name="photos" accept=".jpg, .png, .bmp">
+          <input class="form__file-input" type="file" name="photos" accept=".jpg, .png, .bmp">
+          <input class="form__file-input" type="file" name="photos" accept=".jpg, .png, .bmp">
+          <label class="form__label">Описание проблемы: </label>
+          <label class="form__custom-border">
                     <textarea class="form__textarea" maxlength="500" placeholder="Нужно свалить сосну высотой с двухэтажный дом."></textarea>
                 </label>
+        </div>
       </div>
-    </div>
-    <div class="row no-gutters justify-content-center">
-      <button class="form__button" type="submit">РАССЧИТАТЬ СТОИМОСТЬ</button>
-    </div>
+      <div class="row no-gutters justify-content-center">
+        <button class="form__button" type="submit">РАССЧИТАТЬ СТОИМОСТЬ</button>
+      </div>
+    </form>
   </div>
-</form>
+</section>
