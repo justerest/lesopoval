@@ -1,0 +1,72 @@
+{
+  "atomKeymap.promptV3Features": true,
+  "beautify.config": {
+    "indent_size": 2,
+    "preserve_newlines": true,
+    "css": {
+      "newline_between_rules": true,
+      "space_around_combinator": true,
+    }
+  },
+  "beautify.language": {
+    "js": {
+      "type": [
+        "json"
+      ],
+      "filename": [
+        ".jshintrc",
+        ".jsbeautify"
+      ]
+    },
+    "css": [
+      "css",
+      "scss"
+    ],
+    "html": [
+      "htm",
+      "html"
+    ]
+  },
+  "debug.inlineValues": true,
+  "editor.formatOnSave": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.renderControlCharacters": true,
+  "editor.renderWhitespace": "none",
+  "editor.tabSize": 2,
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    {
+      "language": "vue",
+      "autoFix": true
+    }
+  ],
+  "explorer.confirmDragAndDrop": false,
+  "git.autofetch": true,
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": true,
+    "suppressUpdateNotice": false,
+    "suppressWelcomeNotice": true
+  },
+  "gitlens.currentLine.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "sort-imports.default-sort-style": "module-scoped",
+  "sort-imports.on-save": false,
+  "tslint.autoFixOnSave": true,
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "vetur.format.defaultFormatter.js": "vscode-typescript",
+  "window.menuBarVisibility": "toggle",
+  "workbench.activityBar.visible": false,
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.editor.labelFormat": "medium",
+  "workbench.startupEditor": "welcomePage",
+  "editor.minimap.showSlider": "always",
+  "workbench.panel.defaultLocation": "right",
+  "diffEditor.ignoreTrimWhitespace": true,
+}
