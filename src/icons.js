@@ -1,5 +1,7 @@
 import { Icons } from './assets';
 
+initIcons();
+
 /**
  * @example
  * ```html
