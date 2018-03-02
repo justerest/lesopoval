@@ -1,5 +1,8 @@
 .services {
-  background-color: $color-white;
+  background: $color-white url('assets/services-bg.jpg');
+  background-size: auto 110%;
+  background-position: center top;
+  padding-bottom: 30px;
 
   &__flex {
     display: flex;
@@ -28,9 +31,7 @@
   }
 
   &__label {
-    margin-top: 11px;
-    margin-bottom: 15px;
-    width: 100%;
+    margin-top: 12px;
     display: block;
     height: 42px;
     font: $roboto-bold-21;
