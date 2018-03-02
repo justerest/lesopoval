@@ -1,11 +1,15 @@
 .header {
+  display: flex;
+  align-items: center;
   position: sticky;
+  z-index: 999;
   top: 0;
-  height: 154px;
+  height: 232px;
   background-color: $color-black;
+  color: $color-brown;
 }
 
 .logo {
-  width: 139px;
-  height: 139px;
+  // width: 139px;
+  // height: 139px;
 }
