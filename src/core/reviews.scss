@@ -1,82 +1,57 @@
     .reviews {
-        background-color: $color-brown;
-        &__title {
-            padding-top: 15px;
-            color: $color-white;
-            font: $roboto-slab-bold-48; // }  &__frame {
-            //      position: relative;
-            //      overflow: hidden;
-            //      width: 100%;
-            //      white-space: nowrap;
-            //      border-radius: 10px;
-            //  }
-            //  &__slider {
-            //      padding-left: 6%;
-            //      padding-right: 6%;
-            //  }
-            //  &__slides {
-            //      display: inline-block;
-            //      font: $roboto-regular-24;
-            //      color: $color-black;
-            //      margin-bottom: 0;
-            //  }
-            //  &__slide {
-            //      position: relative;
-            //      display: inline-block;
-            //      width: 1034px;
-            //      height: 218px;
-            //      background-color: $color-white;
-            //  
-        }
-        &__prev,
-        &__next {
-            position: absolute;
-            top: 50%;
-            display: block;
-            margin-top: -25px;
-            cursor: pointer;
-        }
-        &__next {
-            right: 0;
-        }
-        &__prev {
-            left: 0;
-        }
-        &__txt {
-            display: block;
-            width: 742px;
-            font: $roboto-regular-24;
-            word-wrap: break-word;
-        }
-        .slider {
-            padding-left: 80px;
-            padding-right: 80px;
-        }
-        .frame {
-            position: relative;
-            overflow: hidden;
-            /**
+      background-color: $color-brown;
+      &__title {
+        color: $color-white;
+      }
+      &__prev,
+      &__next {
+        position: absolute;
+        top: 50%;
+        display: block;
+        margin-top: -25px;
+        cursor: pointer;
+      }
+      &__next {
+        right: 0;
+      }
+      &__prev {
+        left: 0;
+      }
+      &__txt {
+        display: block;
+        width: 742px;
+        font: $roboto-regular-24;
+        word-wrap: break-word;
+      }
+      .slider {
+        padding-left: 80px;
+        padding-right: 80px;
+      }
+      .frame {
+        position: relative;
+        overflow: hidden;
+        /**
      * (optional) wrapper width, specifies width of the slider frame.
      */
-            height: 250px;
-            white-space: nowrap;
-            font-size: 0;
-            line-height: 0;
-        }
-        .slides {
-            display: inline-block;
-        }
-        li {
-            position: relative;
-            display: inline-block;
-            /**
+        height: 250px;
+        white-space: nowrap;
+        font-size: 0;
+        line-height: 0;
+      }
+      .slides {
+        display: inline-block;
+      }
+      li {
+        position: relative;
+        display: inline-block;
+        /**
      * (optional) if the content inside the slide element has a defined size.
      */
-            width: 980px;
-            background-color: $color-white;
-            height: 250px;
-            font: $roboto-regular-24;
-            padding-top: 37px;
-            padding-left: 67px;
-        }
+        width: 980px;
+        background-color: $color-white;
+        height: 250px;
+        font: $roboto-regular-24;
+        padding-top: 37px;
+        padding-left: 67px;
+      }
     }

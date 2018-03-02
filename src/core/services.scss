@@ -6,7 +6,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 40px;
   }
 
   &__item {
@@ -30,6 +29,7 @@
 
   &__label {
     margin-top: 11px;
+    margin-bottom: 15px;
     width: 100%;
     display: block;
     height: 42px;
