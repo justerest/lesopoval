@@ -6,9 +6,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700&subset=cyrillic-ext');
 @import './globals';
 // 
-@import './core/header';
+@import './layouts/header';
 @import './core/header-carousel';
 @import './core/services';
 @import './core/reviews';
 @import './core/form';
-@import './core/footer';
+@import './layouts/footer';
