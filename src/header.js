@@ -29,12 +29,13 @@ new class HeaderScripts {
   openNav() {
     this.menuIconEl.classList.add('menu-icon_opened');
     this.navEl.classList.add('nav_opened');
-    setTimeout(() => window.addEventListener('click', () => this.closeNav(), { once: true }));
+    setTimeout(() => window.addEventListener('click', this.closeNav.bind(this), { once: true }));
   }
 
   closeNav() {
     this.menuIconEl.classList.remove('menu-icon_opened');
     this.navEl.classList.remove('nav_opened');
+    window.removeEventListener('click', this.closeNav.bind(this));
   }
 
 };
