@@ -1,3 +1,4 @@
+$color-beige: #ddd6c4;
 $color-black: #020502;
 $color-brown-bright: #d96a25;
 $color-brown: #8a6152;
@@ -18,3 +19,11 @@ $roboto-slab-bold-48: 700 48px Roboto Slab;
 
 $transition-fast: .3s;
 $transition-medium: .5s;
+
+/* Bootstrap rewrites */
+
+$container-max-widths: ( //
+sm: 540px,
+md: 720px,
+lg: 960px,
+xl: 1280px)
