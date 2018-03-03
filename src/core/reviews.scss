@@ -1,57 +1,49 @@
-    .reviews {
-      background-color: $color-brown;
-      &__title {
-        color: $color-white;
-      }
-      &__prev,
-      &__next {
-        position: absolute;
-        top: 50%;
-        display: block;
-        margin-top: -25px;
-        cursor: pointer;
-      }
-      &__next {
-        right: 0;
-      }
-      &__prev {
-        left: 0;
-      }
-      &__txt {
-        display: block;
-        width: 742px;
-        font: $roboto-regular-24;
-        word-wrap: break-word;
-      }
-      .slider {
-        padding-left: 80px;
-        padding-right: 80px;
-      }
-      .frame {
-        position: relative;
-        overflow: hidden;
-        /**
-     * (optional) wrapper width, specifies width of the slider frame.
-     */
-        height: 250px;
-        white-space: nowrap;
-        font-size: 0;
-        line-height: 0;
-      }
-      .slides {
-        display: inline-block;
-      }
-      li {
-        position: relative;
-        display: inline-block;
-        /**
-     * (optional) if the content inside the slide element has a defined size.
-     */
-        width: 980px;
-        background-color: $color-white;
-        height: 250px;
-        font: $roboto-regular-24;
-        padding-top: 37px;
-        padding-left: 67px;
-      }
+.reviews {
+  background: $color-brown;
+  padding-bottom: 37px;
+
+  &__title {
+    color: $color-white;
+  }
+
+  &__slider {
+    padding: 0 105px;
+  }
+
+  &__slide {
+    margin-right: 10px;
+    width: 1034px;
+  }
+
+  &__message {
+    white-space: normal;
+    position: relative;
+    padding: 37px 210px 72px 66px;
+    min-height: 218px;
+    background: $color-white;
+    font: $roboto-regular-24;
+    margin-bottom: 71px;
+    border-radius: 10px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: 75px;
+      top: 100%;
+      border-color: $color-white transparent;
+      border-style: solid;
+      border-width: 50px 30px 0 30px;
     }
+  }
+
+  &__author {
+    text-align: right;
+    min-height: 23px;
+    font: $roboto-bold-24;
+    color: $color-white;
+  }
+
+  &__arrow {
+    margin-top: -50px;
+  }
+}

@@ -18,3 +18,8 @@ new class PhotoSlider {
   }
 
 };
+
+lory(document.querySelector('#reviews-slider'), {
+  enableMouseEvents: true,
+  infinite: 1,
+});
