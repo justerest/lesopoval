@@ -48,13 +48,6 @@
             display: none;
         }
     }
-    &__point {
-        width: 20px;
-        height: 20px;
-        background-color: $color-brown;
-        border-radius: 10px;
-        margin-top: -37px;
-    }
     &__txt {
         display: block;
         position: relative;
@@ -75,14 +68,5 @@
         @include media-breakpoint-down(sm) {
             display: none;
         }
-    }
-    &__txt_margin-right-115 {
-        margin-right: -115px;
-    }
-    &__txt_margin-right-240 {
-        margin-right: -240px;
-    }
-    &__txt_margin-right-140 {
-        margin-right: -140px;
     }
 }
