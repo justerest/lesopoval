@@ -1,9 +1,9 @@
 new class HeaderScripts {
 
   constructor() {
-    this.headerEl = document.querySelector('.header');
-    this.menuIconEl = document.querySelector('.menu-icon');
-    this.navEl = document.querySelector('.nav');
+    this.headerEl = document.querySelector('#header');
+    this.menuIconEl = document.querySelector('#menu-icon');
+    this.navEl = document.querySelector('#nav');
 
     this.onScroll();
     this.menuIconEl.addEventListener('click', () => this.toggleNav());

@@ -3,10 +3,9 @@ import { lory } from 'lory.js';
 new class PhotoSlider {
 
   constructor() {
-    this.el = document.querySelector('.photo__slider');
+    this.el = document.querySelector('#photo-slider');
     this.slider = lory(this.el, {
       enableMouseEvents: true,
-      infinite: true,
       rewind: true,
     });
     this.lastSlide = 0;
