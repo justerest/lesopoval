@@ -1,12 +1,10 @@
 .photo {
-  background: $color-beige;
   padding-bottom: 26px;
+  background: $color-beige;
 
   &__slide {
     padding: 0 5px;
-
-    img {
-      pointer-events: none;
-    }
+    user-select: none;
+    pointer-events: none;
   }
 }
