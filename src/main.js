@@ -1,4 +1,5 @@
 import './app.scss';
-import './header';
 import './icons';
+import './header';
 import './sliders';
+import './form';
