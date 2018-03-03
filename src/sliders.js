@@ -1,17 +1,20 @@
 import { lory } from 'lory.js';
 
-new class SlidersScripts {
+new class PhotoSlider {
 
   constructor() {
-    this.photoSlider = document.querySelector('.photo__slider');
-    this.photoSlider.addEventListener('after.lory.slide', event => {
-      const { index, nextSlide } = event.detail;
-      console.log(event);
-    });
-
-    lory(this.photoSlider, {
+    this.el = document.querySelector('.photo__slider');
+    this.slider = lory(this.el, {
       enableMouseEvents: true,
+      infinite: true,
       rewind: true,
+    });
+    this.lastSlide = 0;
+
+    this.el.addEventListener('after.lory.slide', event => {
+      const { currentSlide } = event.detail;
+      if (!currentSlide && this.lastSlide > 2) this.slider.reset();
+      this.lastSlide = currentSlide;
     });
   }
 
