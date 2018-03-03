@@ -17,6 +17,9 @@
     color: $color-orange;
     font: $roboto-slab-regular-14;
     line-height: 25px;
+    @include media-breakpoint-down(md) {
+      text-align: center;
+    }
   }
 
   &__txt_bold {
@@ -26,15 +29,14 @@
   &__menu {
     padding: 0;
     list-style-type: none;
-    color: $color-orange;
     font: $roboto-slab-bold-24;
     line-height: 36px;
-  }
-
-  &__button {
     a {
       text-decoration: none;
       color: $color-orange;
+    }
+    @include media-breakpoint-down(md) {
+      text-align: center;
     }
   }
 }

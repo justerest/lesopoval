@@ -1,0 +1,62 @@
+.work {
+  background-color: $color-white;
+  &__image {
+    width: 61px;
+    height: 56px;
+    color: $color-brown;
+    align-content: center;
+  }
+  &__line {
+    height: 1px;
+    margin-bottom: 26px;
+    margin-top: 24px;
+    background-color: $color-brown;
+  }
+  &__image_margin-left-25 {
+    margin-left: 25%;
+  }
+  &__image_margin-left-55 {
+    margin-left: 55%;
+  }
+  &__image_margin-left-75 {
+    margin-left: 75%;
+  }
+  &__line_margin-left-40 {
+    margin-left: 40%;
+  }
+  &__line_width {
+    width: 65%;
+  }
+  &__point {
+    margin-left: 35%;
+    width: 20px;
+    height: 20px;
+    background-color: $color-brown;
+    border-radius: 10px;
+    margin-top: -37px;
+  }
+  &__point_margin-60 {
+    margin-left: 60%;
+  }
+  &__point_margin-83 {
+    margin-left: 83%;
+  }
+  &__point_margin-63 {
+    margin-left: 63%;
+  }
+  &__txt {
+    color: $color-black;
+    font: $roboto-bold-30;
+    text-align: center;
+    margin-left: -30px;
+  }
+  &__txt_margin-right-115 {
+    margin-right: -115px;
+  }
+  &__txt_margin-right-240 {
+    margin-right: -240px;
+  }
+  &__txt_margin-right-140 {
+    margin-right: -140px;
+  }
+}
