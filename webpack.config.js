@@ -1,7 +1,11 @@
+const glob = require('glob-all');
 const path = require('path');
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
+const PurifyCSSPlugin = require('purifycss-webpack');
 
 module.exports = {
 
@@ -98,3 +102,21 @@ module.exports = {
     new ExtractTextPlugin('styles.[hash].css'),
   ],
 };
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports.plugins.push(
+    new PurifyCSSPlugin({
+      paths: glob.sync([
+        path.join(__dirname, './src/**/*.html'),
+        path.join(__dirname, './src/**/*.js'),
+      ]),
+    }),
+    new OptimizeCSSPlugin({
+      cssProcessorOptions: {
+        safe: true,
+        discardComments: { removeAll: true },
+      },
+    }),
+    new BundleAnalyzerPlugin()
+  );
+}
