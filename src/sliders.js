@@ -5,7 +5,6 @@ new class PhotoSlider {
   constructor() {
     this.el = document.querySelector('#photo-slider');
     this.slider = lory(this.el, {
-      enableMouseEvents: true,
       rewind: true,
     });
     this.lastSlide = 0;
