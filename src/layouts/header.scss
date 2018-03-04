@@ -42,11 +42,11 @@
 
   &__menu {
     margin-top: 8px;
-    margin-right: -32px;
+    margin-right: -22px;
+    margin-left: -10px;
 
     @include media-breakpoint-up(lg) {
-      visibility: hidden;
-      opacity: 0;
+      display: none;
     }
   }
 
@@ -55,8 +55,7 @@
   }
 
   &_position_not-top &__menu {
-    visibility: visible;
-    opacity: 1;
+    display: block;
   }
 
   &_position_not-top &__logo {
