@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
-    "lory.js": "^2.4.1"
+    "lory.js": "^2.4.1",
+    "photoswipe": "^4.1.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
