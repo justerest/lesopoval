@@ -4,4 +4,3 @@ import './header';
 import './sliders';
 import './modal-photo';
 import './form';
-import './header-carousel';
