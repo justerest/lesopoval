@@ -38,6 +38,10 @@
     top: calc(50% - 27.5px);
     display: block;
     cursor: pointer;
+
+    @include media-breakpoint-down(md) {
+      transform: scale(.5);
+    }
   }
 
   .next {
