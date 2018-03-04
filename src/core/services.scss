@@ -9,6 +9,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+
+    @include media-breakpoint-down(md) {
+      justify-content: center;
+    }
   }
 
   &__item {

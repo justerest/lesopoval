@@ -4,11 +4,14 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding-top: 18px;
   padding-bottom: 7px;
   transition: all $transition-medium;
   color: $color-orange;
   background-color: $color-black;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 18px;
+  }
 
   &__flex-container {
     position: relative;
@@ -19,23 +22,32 @@
 
   &__phone {
     margin-left: auto;
-    color: $color-white;
+    color: $color-white !important;
     font: $roboto-slab-bold-46;
+
+    @include media-breakpoint-down(md) {
+      font: $roboto-slab-bold-30;
+    }
   }
 
   &__logo {
     width: 161px;
     height: 150px;
     transition: all $transition-medium;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
   }
 
   &__menu {
-    position: absolute !important;
-    top: 18px;
-    left: -10px;
-    visibility: hidden;
-    margin: auto 0;
-    opacity: 0;
+    margin-top: 8px;
+    margin-right: -32px;
+
+    @include media-breakpoint-up(lg) {
+      visibility: hidden;
+      opacity: 0;
+    }
   }
 
   &_position_not-top {
@@ -48,7 +60,7 @@
   }
 
   &_position_not-top &__logo {
-    visibility: hidden;
+    visibility: collapse;
     height: 60px;
     opacity: 0;
   }
@@ -60,23 +72,45 @@
   width: 100%;
   padding-left: 30px;
   transition: all $transition-medium;
-  font: $roboto-slab-bold-25;
+
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+    margin-top: 15px;
+  }
 
   &__item {
     position: relative;
     padding: 16px 0 9px;
     cursor: pointer;
     transition: all $transition-fast;
+    color: inherit;
+    font: $roboto-slab-bold-25;
 
-    &:after {
-      position: absolute;
-      bottom: -7px;
-      left: -8px;
-      width: calc(100% + 16px);
-      height: 0;
-      content: '';
-      transition: all $transition-fast;
-      background-color: $color-white;
+    @include media-breakpoint-down(md) {
+      padding: 8px 0;
+      font: $roboto-slab-bold-24;
+
+      & + &:before {
+        position: absolute;
+        top: 0;
+        left: -50vw;
+        width: 200vw;
+        height: 2px;
+        content: '';
+        background: rgba($color-beige, .3);
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      &:after {
+        position: absolute;
+        bottom: -7px;
+        left: -8px;
+        width: calc(100% + 16px);
+        height: 0;
+        content: '';
+        transition: all $transition-fast;
+        background-color: $color-white;
+      }
     }
 
     &:hover {
@@ -89,17 +123,25 @@
   }
 
   .header_position_not-top &:not(.nav_opened) {
-    visibility: hidden;
+    visibility: collapse;
     margin-top: -65px;
     opacity: 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    &:not(.nav_opened) {
+      visibility: collapse;
+      opacity: 0;
+      margin-top: -288px !important;
+    }
   }
 }
 
 .menu-icon {
   position: relative;
   z-index: 10;
-  width: 40px;
-  height: 30px;
+  width: 32px;
+  height: 28px;
   cursor: pointer;
   transition: .5s ease-in-out;
   transform: rotate(0deg);
@@ -109,7 +151,7 @@
     left: 0;
     display: block;
     width: 100%;
-    height: 7px;
+    height: 6px;
     transition: .25s ease-in-out;
     transform: rotate(0deg);
     opacity: 1;
@@ -122,18 +164,18 @@
 
     &:nth-child(2),
     &:nth-child(3) {
-      top: 12px;
+      top: 10px;
     }
 
     &:nth-child(4) {
-      top: 24px;
+      top: 20px;
     }
   }
 
   &_opened {
     span {
       &:nth-child(1) {
-        top: 12px;
+        top: 10px;
         left: 50%;
         width: 0;
       }
@@ -147,7 +189,7 @@
       }
 
       &:nth-child(4) {
-        top: 12px;
+        top: 10px;
         left: 50%;
         width: 0;
       }

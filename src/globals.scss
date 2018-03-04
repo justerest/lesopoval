@@ -2,6 +2,10 @@ body {
   padding-top: 230px;
   background-color: $color-black;
   font-family: 'Roboto', sans-serif;
+
+  @include media-breakpoint-down(md) {
+    padding-top: 47px;
+  }
 }
 
 * {
@@ -29,4 +33,11 @@ body {
   border-radius: 10px;
   background-color: $color-brown-bright;
   font: $roboto-bold-30;
+}
+
+.link-default {
+  &:hover {
+    text-decoration: none;
+    color: unset;
+  }
 }

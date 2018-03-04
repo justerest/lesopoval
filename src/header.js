@@ -6,8 +6,11 @@ new class HeaderScripts {
     this.navEl = document.querySelector('#nav');
 
     this.onScroll();
-    this.menuIconEl.addEventListener('click', () => this.toggleNav());
-    window.addEventListener('scroll', () => this.onScroll());
+    this.menuIconEl.addEventListener('click', this.toggleNav.bind(this));
+    this.navEl.querySelectorAll('a').forEach(el => {
+      el.addEventListener('click', this.closeNav.bind(this));
+    });
+    window.addEventListener('scroll', this.onScroll.bind(this));
   }
 
   onScroll() {
@@ -29,13 +32,11 @@ new class HeaderScripts {
   openNav() {
     this.menuIconEl.classList.add('menu-icon_opened');
     this.navEl.classList.add('nav_opened');
-    setTimeout(() => window.addEventListener('click', this.closeNav.bind(this), { once: true }));
   }
 
   closeNav() {
     this.menuIconEl.classList.remove('menu-icon_opened');
     this.navEl.classList.remove('nav_opened');
-    window.removeEventListener('click', this.closeNav.bind(this));
   }
 
 };
