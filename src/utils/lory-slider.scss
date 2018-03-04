@@ -1,54 +1,67 @@
 .slider {
-  position: relative;
-  /**
+    position: relative;
+    /**
    * (optional) define here the style definitions which should be applied on the slider container
    * e.g. width including further controls like arrows etc.
    */
-  max-width: 100%;
-
-  .frame {
-    position: relative;
-    overflow: hidden;
-    /**
+    max-width: 100%;
+    .frame {
+        position: relative;
+        overflow: hidden;
+        /**
    * (optional) wrapper width, specifies width of the slider frame.
    */
-    // width: 500px;
-    white-space: nowrap;
-    font-size: 0;
-    line-height: 0;
-  }
-
-  .slides {
-    display: inline-block;
-    margin-bottom: 0;
-  }
-
-  li {
-    position: relative;
-    display: inline-block;
-    /**
+        // width: 500px;
+        white-space: nowrap;
+        font-size: 0;
+        line-height: 0;
+    }
+    .slides {
+        display: inline-block;
+        margin-bottom: 0;
+    }
+    li {
+        position: relative;
+        display: inline-block;
+        /**
    * (optional) if the content inside the slide element has a defined size.
    */
-    // width: 880px;
-  }
-
-  .prev,
-  .next {
-    position: absolute;
-    top: calc(50% - 27.5px);
-    display: block;
-    cursor: pointer;
-
-    @include media-breakpoint-down(md) {
-      transform: scale(.5);
+        // width: 880px;
     }
-  }
-
-  .next {
-    right: 20px;
-  }
-
-  .prev {
-    left: 20px;
-  }
+    .prev,
+    .next {
+        position: absolute;
+        top: calc(50% - 27.5px);
+        display: block;
+        cursor: pointer;
+        @include media-breakpoint-down(md) {
+            transform: scale(.5);
+        }
+    }
+    .next {
+        right: 20px;
+    }
+    .prev {
+        left: 20px;
+    }
+    .dots {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        bottom: 10px;
+        li {
+            background-color: $color-brown-bright;
+            border-radius: 11px;
+            display: inline-block;
+            height: 22px;
+            width: 22px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        li.active {
+            background-color: $color-white;
+        }
+    }
 }

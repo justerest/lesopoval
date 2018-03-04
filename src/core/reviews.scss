@@ -26,8 +26,7 @@
             width: 298px;
         }
         @include media-breakpoint-down(xs) {
-            width: 170px;
-            margin-right: 300px;
+            width: 250px;
         }
     }
     &__message {
@@ -48,11 +47,11 @@
             border-style: solid;
             border-width: 50px 30px 0 30px;
             @include media-breakpoint-down(lg) {
-                border-width: 25px 30px 0 30px;
+                border-width: 25px 15px 0 15px;
             }
             @include media-breakpoint-down(xs) {
                 right: 20px;
-                border-width: 15px 15px 0 15px;
+                border-width: 10px 6px 0 6px;
             }
         }
         @include media-breakpoint-down(lg) {
@@ -60,6 +59,7 @@
         }
         @include media-breakpoint-down(md) {
             padding: 37px 37px 72px 66px;
+            margin-bottom: 40px;
         }
         @include media-breakpoint-down(sm) {
             font: $roboto-regular-18;
@@ -84,9 +84,8 @@
         }
     }
     &__arrow {
-        margin-top: -50px;
-        @include media-breakpoint-down(xs) {
-            display: none !important;
-        }
+        margin-top: -50px; // @include media-breakpoint-down(xs) {
+        //     display: none !important;
+        // }
     }
 }

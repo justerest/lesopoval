@@ -2,6 +2,9 @@
     background-color: $color-white;
     .container {
         padding-top: 42px;
+        @include media-breakpoint-down(md) {
+            padding-top: 0;
+        }
     }
     &__item {
         width: 583px;
@@ -54,6 +57,9 @@
         margin-bottom: 36px;
         text-align: center;
         font: $roboto-bold-30;
+        @include media-breakpoint-down(sm) {
+            font: $roboto-slab-bold-18;
+        }
     }
     &__input {
         width: 100%;
@@ -64,6 +70,9 @@
     &__label {
         display: block;
         font: $roboto-bold-30;
+        @include media-breakpoint-down(sm) {
+            font: $roboto-bold-21;
+        }
     }
     &__custom-border {
         position: relative;

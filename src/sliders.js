@@ -22,3 +22,4 @@ lory(document.querySelector('#reviews-slider'), {
   enableMouseEvents: true,
   infinite: 1,
 });
+
