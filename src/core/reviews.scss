@@ -1,49 +1,92 @@
 .reviews {
-  background: $color-brown;
-  padding-bottom: 37px;
-
-  &__title {
-    color: $color-white;
-  }
-
-  &__slider {
-    padding: 0 105px;
-  }
-
-  &__slide {
-    margin-right: 10px;
-    width: 1034px;
-  }
-
-  &__message {
-    white-space: normal;
-    position: relative;
-    padding: 37px 210px 72px 66px;
-    min-height: 218px;
-    background: $color-white;
-    font: $roboto-regular-24;
-    margin-bottom: 71px;
-    border-radius: 10px;
-
-    &:after {
-      content: '';
-      position: absolute;
-      right: 75px;
-      top: 100%;
-      border-color: $color-white transparent;
-      border-style: solid;
-      border-width: 50px 30px 0 30px;
+    background: $color-brown;
+    padding-bottom: 37px;
+    &__title {
+        color: $color-white;
     }
-  }
-
-  &__author {
-    text-align: right;
-    min-height: 23px;
-    font: $roboto-bold-24;
-    color: $color-white;
-  }
-
-  &__arrow {
-    margin-top: -50px;
-  }
+    &__slider {
+        padding: 0 105px;
+        @include media-breakpoint-down(xs) {
+            padding: 0px 60px;
+        }
+    }
+    &__slide {
+        margin-right: 10px;
+        width: 1034px;
+        @include media-breakpoint-down(lg) {
+            margin-right: 327px;
+            width: 718px;
+        }
+        @include media-breakpoint-down(md) {
+            margin-right: 567px;
+            width: 478px;
+        }
+        @include media-breakpoint-down(sm) {
+            margin-right: 750px;
+            width: 298px;
+        }
+        @include media-breakpoint-down(xs) {
+            width: 170px;
+            margin-right: 300px;
+        }
+    }
+    &__message {
+        white-space: normal;
+        position: relative;
+        padding: 37px 210px 72px 66px;
+        min-height: 218px;
+        background: $color-white;
+        font: $roboto-regular-24;
+        margin-bottom: 71px;
+        border-radius: 10px;
+        &:after {
+            content: '';
+            position: absolute;
+            right: 75px;
+            top: 100%;
+            border-color: $color-white transparent;
+            border-style: solid;
+            border-width: 50px 30px 0 30px;
+            @include media-breakpoint-down(lg) {
+                border-width: 25px 30px 0 30px;
+            }
+            @include media-breakpoint-down(xs) {
+                right: 20px;
+                border-width: 15px 15px 0 15px;
+            }
+        }
+        @include media-breakpoint-down(lg) {
+            padding: 37px 150px 35px 62px;
+        }
+        @include media-breakpoint-down(md) {
+            padding: 37px 37px 72px 66px;
+        }
+        @include media-breakpoint-down(sm) {
+            font: $roboto-regular-18;
+            padding: 19px 23px 29px 32px;
+        }
+        @include media-breakpoint-down(xs) {
+            font: $roboto-regular-14;
+            padding: 10px 10px 10px 10px;
+            margin-bottom: 35px;
+        }
+    }
+    &__author {
+        text-align: right;
+        min-height: 23px;
+        font: $roboto-bold-24;
+        color: $color-white;
+        @include media-breakpoint-down(sm) {
+            font: $roboto-bold-15;
+        }
+        @include media-breakpoint-down(xs) {
+            font: 700 9px Roboto;
+        }
+    }
+    &__arrow {
+        margin-top: -50px;
+        @include media-breakpoint-down(xs) {
+            display: none !important;
+        }
+    }
 }

@@ -4,12 +4,16 @@
         padding-top: 42px;
     }
     &__item {
-        width: 562px;
+        width: 583px;
+        @include media-breakpoint-down(lg) {
+            width: 100%;
+        }
     }
     &__flex {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        align-items: center;
         width: 100%;
     }
     input::placeholder,
@@ -31,11 +35,7 @@
         -webkit-appearance: none;
         -moz-appearance: none;
     }
-    input {
-        border: none;
-        outline: none;
-        background: transparent;
-    }
+    input,
     textarea {
         border: none;
         outline: none;
@@ -73,6 +73,9 @@
         @include media-breakpoint-down(md) {
             width: 100%;
         }
+    }
+    &__custom-border_fixed-height {
+        height: 137px;
     }
     &__triangle {
         position: absolute;

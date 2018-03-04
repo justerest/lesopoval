@@ -5,9 +5,11 @@ $color-brown: #8a6152;
 $color-orange: #be785d;
 $color-white: #fff;
 // 
+$roboto-regular-14: 400 14px Roboto;
 $roboto-regular-18: 400 18px Roboto;
 $roboto-regular-24: 400 24px Roboto;
 $roboto-regular-30: 400 30px Roboto;
+$roboto-bold-15: 700 15px Roboto;
 $roboto-bold-21: 700 21px Roboto;
 $roboto-bold-24: 700 24px Roboto;
 $roboto-bold-30: 700 30px Roboto;
@@ -26,5 +28,4 @@ $transition-medium: .5s;
 /* Bootstrap rewrites */
 
 $grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1340px);
-
 $container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1280px);
