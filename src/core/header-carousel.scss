@@ -1,54 +1,124 @@
 .header-carousel {
-  &__label {
-    position: absolute;
-    top: 12px;
-    right: 30px;
-  }
-
-  &__logo {
-    opacity: .7;
-    color: $color-black;
-  }
+    &__label {
+        position: absolute;
+        top: 12px;
+        right: -90px;
+        @include media-breakpoint-down(md) {
+            width: 85px;
+            right: -80px;
+        }
+        @include media-breakpoint-down(sm) {
+            width: 85px;
+            right: -30px;
+        }
+    }
+    &__logo {
+        opacity: .7;
+        color: $color-black;
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
 }
 
 .header-slide {
-  overflow: hidden;
-
-  width: 100vw;
-  height: 346px;
-  user-select: none;
-  pointer-events: none;
-
-  &__flex-container {
-    position: relative;
-
-    display: flex;
-    align-items: center;
-    width: 100%;
+    overflow: hidden;
+    width: 100vw;
     height: 346px;
-  }
-
-  &_1 {
-    background: url('assets/tree-bg.jpg') center/cover no-repeat;
-  }
-
-  &_2 {
-    background: url('assets/blue-bg.jpg') center/contain no-repeat $color-blue;
-  }
-
-  &_3 {
-    position: relative;
-    background: url('assets/brown-bg.jpg') 25% top/contain no-repeat;
-
-    &:before {
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      content: '';
-      background: radial-gradient(circle farthest-corner at 25% 50%, $color-beige-dark, $color-brown-light);
+    user-select: none;
+    pointer-events: none;
+    &__flex-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 346px;
+        @include media-breakpoint-down(md) {
+            justify-content: center;
+        }
     }
-  }
+    &_1 {
+        background: url('assets/tree-bg.jpg') center/cover no-repeat;
+    }
+    &_2 {
+        background: url('assets/blue-bg.jpg') center/contain no-repeat $color-blue;
+    }
+    &_3 {
+        position: relative;
+        background: url('assets/brown-bg.jpg') 25% top/contain no-repeat;
+        &:before {
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            content: '';
+            background: radial-gradient(circle farthest-corner at 25% 50%, $color-beige-dark, $color-brown-light);
+        }
+        @include media-breakpoint-down(md) {
+            background-position-x: left;
+        }
+        @include media-breakpoint-down(sm) {
+            background-position-y: center;
+        }
+    }
+    &__title {
+        font: $roboto-slab-bold-58;
+        color: $color-brown-bright;
+        text-align: left;
+        mix-blend-mode: multiply;
+        &_3 {
+            color: $color-black;
+            font: $roboto-slab-bold-55;
+            text-transform: uppercase;
+            @include media-breakpoint-down(sm) {
+                font: $roboto-slab-bold-34;
+            }
+        }
+        @include media-breakpoint-down(sm) {
+            font: $roboto-slab-bold-34;
+        }
+    }
+    &__text {
+        position: absolute;
+        right: 150px;
+        top: 80px;
+        @include media-breakpoint-down(lg) {
+            position: static;
+        }
+        &_3 {
+            position: absolute;
+            right: 140px;
+            top: 85px;
+            @include media-breakpoint-down(md) {
+                position: static;
+            }
+        }
+    }
+    &__subtitle {
+        font: $roboto-slab-bold-44;
+        color: $color-grey;
+        text-transform: uppercase;
+        text-align: left;
+        mix-blend-mode: color-burn;
+        &_letter-spacing {
+            letter-spacing: 0.9px;
+            &_3 {
+                letter-spacing: 0.7px;
+            }
+        }
+        &_3 {
+            font: $roboto-slab-bold-48;
+            color: $color-milk;
+            @include media-breakpoint-down(sm) {
+                font: $roboto-slab-bold-29;
+                letter-spacing: 0.45px;
+            }
+        }
+        @include media-breakpoint-down(sm) {
+            font: $roboto-slab-bold-25;
+            letter-spacing: 0.45px;
+        }
+    }
 }
