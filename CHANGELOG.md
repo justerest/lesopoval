@@ -1,5 +1,10 @@
+<a name="1.0.0-beta.1"></a>
+# [1.0.0-beta.1](https://github.com/justerest/lesopoval/compare/v1.0.0-beta.0...v1.0.0-beta.1) (2018-03-05)
+
+
+
 <a name="1.0.0-beta.0"></a>
-# 1.0.0-beta.0 (2018-03-05)
+# [1.0.0-beta.0](https://github.com/justerest/lesopoval/compare/9419863...v1.0.0-beta.0) (2018-03-05)
 
 
 ### Bug Fixes
