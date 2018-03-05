@@ -9,8 +9,8 @@
   &__slider {
     padding: 0 105px;
 
-    @include media-breakpoint-down(xs) {
-      padding: 0 60px;
+    @include media-breakpoint-down(sm) {
+      padding: 0;
     }
   }
 
@@ -20,19 +20,15 @@
 
     @include media-breakpoint-down(lg) {
       width: 718px;
-      margin-right: 327px;
     }
     @include media-breakpoint-down(md) {
       width: 478px;
-      margin-right: 567px;
     }
     @include media-breakpoint-down(sm) {
-      width: 298px;
-      margin-right: 750px;
+      width: 510px;
     }
     @include media-breakpoint-down(xs) {
-      width: 180px;
-      margin-left: 280px;
+      width: calc(100vw - 30px);
     }
   }
 
@@ -91,12 +87,13 @@
     @include media-breakpoint-down(sm) {
       font: $roboto-bold-15;
     }
-    @include media-breakpoint-down(xs) {
-      font: 700 9px Roboto;
-    }
   }
 
   &__arrow {
     margin-top: -50px;
+
+    @include media-breakpoint-down(sm) {
+      display: none !important;
+    }
   }
 }
