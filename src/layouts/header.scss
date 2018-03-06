@@ -27,7 +27,7 @@
     font: $roboto-slab-bold-46;
 
     @include media-breakpoint-down(md) {
-      font: $roboto-slab-bold-30;
+      font: $roboto-slab-regular-30;
     }
   }
 
@@ -87,7 +87,7 @@
 
     @include media-breakpoint-down(md) {
       padding: 8px 0;
-      font: $roboto-slab-bold-24;
+      font: $roboto-slab-regular-24;
 
       & + &:before {
         position: absolute;
