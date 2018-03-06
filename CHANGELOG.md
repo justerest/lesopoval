@@ -1,3 +1,22 @@
+<a name="1.0.0-beta.2"></a>
+# [1.0.0-beta.2](https://github.com/justerest/lesopoval/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2018-03-06)
+
+
+### Bug Fixes
+
+* **header font-weight:** change to 400 on mobile ([d9a4e80](https://github.com/justerest/lesopoval/commit/d9a4e80))
+* **header slider:** add autoplay ([ed7b57e](https://github.com/justerest/lesopoval/commit/ed7b57e))
+* **header slider:** add bgc for 1 slide ([713bf28](https://github.com/justerest/lesopoval/commit/713bf28))
+* **photo slider:** show arrows on mobile ([3f5f8e4](https://github.com/justerest/lesopoval/commit/3f5f8e4))
+* **reviews slider:** show arrows on mobile ([6435af9](https://github.com/justerest/lesopoval/commit/6435af9))
+
+
+### Features
+
+* **size:** convert svg into png ([9459bb0](https://github.com/justerest/lesopoval/commit/9459bb0))
+
+
+
 <a name="1.0.0-beta.1"></a>
 # [1.0.0-beta.1](https://github.com/justerest/lesopoval/compare/v1.0.0-beta.0...v1.0.0-beta.1) (2018-03-05)
 
