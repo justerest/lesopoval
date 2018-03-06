@@ -8,44 +8,48 @@ new class HeaderSlider {
     this.dot_container = this.simple_dots.querySelector('.js_dots');
     this.dot_list_item = document.createElement('li');
 
-    this.simple_dots.addEventListener('before.lory.init', this.handleDotEvent.bind(this));
-    this.simple_dots.addEventListener('after.lory.init', this.handleDotEvent.bind(this));
-    this.simple_dots.addEventListener('after.lory.slide', this.handleDotEvent.bind(this));
-    this.simple_dots.addEventListener('on.lory.resize', this.handleDotEvent.bind(this));
+    this.simple_dots.addEventListener('before.lory.init', this.beforeInit.bind(this));
+    this.simple_dots.addEventListener('after.lory.init', this.afterInit.bind(this));
+    this.simple_dots.addEventListener('after.lory.slide', this.afterSlide.bind(this));
+    this.simple_dots.addEventListener('on.lory.resize', this.onResize.bind(this));
 
     this.slider = lory(this.simple_dots, {
       enableMouseEvents: true,
       infinite: 1,
     });
+
+    this.timeout = setTimeout(this.slider.next.bind(this.slider), 5000);
   }
 
-  handleDotEvent(e) {
-    if (e.type === 'before.lory.init') {
-      for (let i = 0, len = this.dot_count; i < len; i++) {
-        const clone = this.dot_list_item.cloneNode();
-        this.dot_container.appendChild(clone);
-      }
-      this.dot_container.childNodes[0].classList.add('active');
+  beforeInit() {
+    for (let i = 0; i < this.dot_count; i++) {
+      this.dot_container.appendChild(this.dot_list_item.cloneNode());
     }
-    if (e.type === 'after.lory.init') {
-      for (let i = 0, len = this.dot_count; i < len; i++) {
-        this.dot_container.childNodes[i].addEventListener('click', e => {
-          this.slider.slideTo(Array.prototype.indexOf.call(this.dot_container.childNodes, e.target));
-        });
-      }
+    this.dot_container.childNodes[0].classList.add('active');
+  }
+
+  afterInit() {
+    for (let i = 0; i < this.dot_count; i++) {
+      this.dot_container.childNodes[i].addEventListener('click', e => {
+        this.slider.slideTo(Array.prototype.indexOf.call(this.dot_container.childNodes, e.target));
+      });
     }
-    if (e.type === 'after.lory.slide') {
-      for (let i = 0, len = this.dot_container.childNodes.length; i < len; i++) {
-        this.dot_container.childNodes[i].classList.remove('active');
-      }
-      this.dot_container.childNodes[e.detail.currentSlide - 1].classList.add('active');
-    }
-    if (e.type === 'on.lory.resize') {
-      for (let i = 0, len = this.dot_container.childNodes.length; i < len; i++) {
-        this.dot_container.childNodes[i].classList.remove('active');
-      }
-      this.dot_container.childNodes[0].classList.add('active');
-    }
+  }
+
+  afterSlide(event) {
+    this.dot_container.childNodes.forEach(el => el.classList.remove('active'));
+    this.dot_container.childNodes[event.detail.currentSlide - 1].classList.add('active');
+    this.autoNext();
+  }
+
+  onResize() {
+    this.dot_container.childNodes.forEach(el => el.classList.remove('active'));
+    this.dot_container.childNodes[0].classList.add('active');
+  }
+
+  autoNext() {
+    clearTimeout(this.timeout);
+    this.timeout = setTimeout(this.slider.next.bind(this.slider), 5000);
   }
 
 };
