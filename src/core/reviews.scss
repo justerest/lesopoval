@@ -93,7 +93,8 @@
     margin-top: -50px;
 
     @include media-breakpoint-down(sm) {
-      display: none !important;
+      margin-top: 0;
+      top: -70px !important;
     }
   }
 }
