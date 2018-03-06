@@ -80,6 +80,16 @@ module.exports = {
     },
     {
       test: /\.svg$/,
+      include: [path.resolve(__dirname, 'src/assets/default-skin')],
+      loader: 'file-loader',
+      options: {
+        name: '[name].[ext]?[hash]',
+        outputPath: 'img/',
+      },
+    },
+    {
+      test: /\.svg$/,
+      exclude: [path.resolve(__dirname, 'src/assets/default-skin')],
       loader: 'svg-inline-loader',
       options: {
         removeTags: true,
@@ -109,6 +119,7 @@ if (process.env.NODE_ENV === 'production') {
       paths: glob.sync([
         path.join(__dirname, './src/**/*.html'),
         path.join(__dirname, './src/**/*.js'),
+        path.join(__dirname, './node_modules/photoswipe/dist/*.min.js'),
       ]),
     }),
     new OptimizeCSSPlugin({
