@@ -26,7 +26,7 @@
   height: 346px;
   user-select: none;
   pointer-events: none;
-  background: url('assets/tree-bg.jpg') center -90px/100% auto repeat;
+  background: url('assets/tree-bg.jpg') center -90px/100% auto repeat $color-brown-light;
 
   &_2 {
     background: url('assets/blue-bg.jpg') center/auto 100% no-repeat $color-blue;
